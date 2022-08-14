@@ -19,7 +19,7 @@ asn,handle,description
 This repository is updated daily.
 
 ## Use cases
-- Find out more about a specific ASN (autonomous system number) using the provided lookup table (currently .csv format only) or use it in your own software project for bulk/offline use
+- Find out more about a specific ASN (autonomous system number), use it in your own software project for bulk/offline use
 - OSINT/CTI Cyber Threat Intelligence
 
 ## How to use
