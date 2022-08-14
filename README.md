@@ -1,6 +1,6 @@
 # ipverse-asn-info
 
-A list of autonomous systems with their AS number (ASN), AS name and description ordered by ASN. Currently, the data is only available as CSV-format:
+A list of autonomous systems with their AS number (ASN), AS name and description ordered by ASN. The data is available in CSV format:
 ```
 asn,handle,description
 0,IANA-RSVD,"Internet Assigned Numbers Authority"
