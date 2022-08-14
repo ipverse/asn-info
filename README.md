@@ -1,0 +1,28 @@
+# ipverse-asn-info
+
+A list of autonomous systems with their AS number (ASN), AS name and description ordered by ASN. Currently, the data is only available as CSV-format:
+```
+asn,handle,description
+0,IANA-RSVD,"Internet Assigned Numbers Authority"
+1,LVLT,"Level 3 Parent, LLC"
+2,UDEL-DCN,"University of Delaware"
+3,MIT-GATEWAYS,"Massachusetts Institute of Technology"
+4,ISI,"University of Southern California"
+5,SYMBOLICS,"WFA Group LLC"
+6,BULL-HN,"ATOS IT Solutions and Services, Inc."
+7,DSTL,"The Defence Science and Technology Laboratory"
+.
+.
+.
+```
+
+This repository is updated daily.
+
+## Use cases
+- Find out more about a specific ASN (autonomous system number) using the provided lookup table (currently .csv format only) or use it in your own software project for bulk/offline use
+- OSINT/CTI Cyber Threat Intelligence
+
+## How to use
+
+To download the latest autonomous system lookup table used to enhance the generated route data:  
+```$ curl https://raw.githubusercontent.com/ipverse/asn-info/master/as.csv```
