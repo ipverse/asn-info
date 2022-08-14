@@ -24,5 +24,4 @@ This repository is updated daily.
 
 ## How to use
 
-To download the latest autonomous system lookup table used to enhance the generated route data:  
 ```$ curl -O https://raw.githubusercontent.com/ipverse/asn-info/master/as.csv```
