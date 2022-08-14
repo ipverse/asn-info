@@ -24,5 +24,5 @@ This repository is updated daily.
 
 ## How to use
 
-Clone the repository or download the raw data:
+Clone the repository or download the raw data:  
 ```$ curl -O https://raw.githubusercontent.com/ipverse/asn-info/master/as.csv```
