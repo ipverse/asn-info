@@ -1,6 +1,7 @@
 # ipverse-asn-info
 
-A list of autonomous systems with their AS number (ASN), AS name and description ordered by ASN. The data is available in CSV format:
+A list of autonomous systems used in Border Gateway Protocol (BGP) routing with their AS number (ASN), AS name and description ordered by ASN. The data is available in CSV format:
+
 ```
 asn,handle,description
 0,IANA-RSVD,"Internet Assigned Numbers Authority"
@@ -16,7 +17,7 @@ asn,handle,description
 .
 ```
 
-This repository is updated daily.
+This repository is updated daily (if the underlying data changes).
 
 ## Use cases
 - Find out more about a specific ASN (autonomous system number), use it in your own software project for bulk/offline use
