@@ -21,7 +21,7 @@ This repository is updated daily (if the underlying data changes).
 
 ## Update notes
 
-- 2025-8-3: Removed opinionated handle cleanup
+- 2025-8-3: Removed opinionated handle cleanup and removed quotes around descriptions to improve RFC4180 compliance
 - 2023-9-3: Removed PEM certificates from description field
 
 ## Use cases
