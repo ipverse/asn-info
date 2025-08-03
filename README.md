@@ -19,6 +19,11 @@ asn,handle,description
 
 This repository is updated daily (if the underlying data changes).
 
+## Update notes
+
+- 2025-8-3: Removed opinionated handle cleanup
+- 2023-9-3: Removed PEM certificates from description field
+
 ## Use cases
 - Find out more about a specific ASN (autonomous system number), use it in your own software project for bulk/offline use
 - OSINT/CTI Cyber Threat Intelligence
