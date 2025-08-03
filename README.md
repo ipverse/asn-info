@@ -10,7 +10,7 @@ asn,handle,description
 3,MIT-GATEWAYS,Massachusetts Institute of Technology
 4,ISI,University of Southern California
 5,SYMBOLICS,WFA Group LLC
-6,BULL-HN,ATOS IT Solutions and Services, Inc.
+6,BULL-HN,ATOS IT Solutions and Services Inc.
 7,DSTL,The Defence Science and Technology Laboratory
 .
 .
