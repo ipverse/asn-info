@@ -5,7 +5,7 @@ A list of autonomous systems used in Border Gateway Protocol (BGP) routing with 
 ```
 asn,handle,description
 0,IANA-RSVD,Internet Assigned Numbers Authority
-1,LVLT,Level 3 Parent, LLC
+1,LVLT,Level 3 Parent LLC
 2,UDEL-DCN,University of Delaware
 3,MIT-GATEWAYS,Massachusetts Institute of Technology
 4,ISI,University of Southern California
