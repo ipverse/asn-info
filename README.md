@@ -1,6 +1,6 @@
 # as-metadata (formerly asn-info)
 
-> **📢 Heads up:** This repo has a new name and the data format has changed. Terribly sorry but if you're using this in production, check out [MIGRATION.md](MIGRATION.md) for what you need to update. The data is provided as-is on a best-effort basis.
+> **📢 Heads up:** This repo has been upgraded! Now includes a new **JSON format** with full country names and origin tracking, plus country codes in CSV. The repo has been renamed to `as-metadata` to reflect the richer dataset. If you're using this in production, check out [MIGRATION.md](MIGRATION.md) for the quick migration steps (most users just need to update URLs). The data is provided as-is on a best-effort basis.
 
 A comprehensive dataset of autonomous system metadata for all assigned ASNs (autonomous system numbers). Includes handle, organization name, and country code sourced from regional internet registries (RIRs). Updated daily when the underlying data changes.
 
