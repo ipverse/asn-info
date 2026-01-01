@@ -54,7 +54,7 @@ asn,handle,description,country-code
 - **country-code**: ISO 3166-1 alpha-2 country code
 - **origin** (JSON only): Metadata source indicator
   - `authoritative`: From authoritative source
-  - `inferred`: Derived from incomplete or missing authoritative data; may be inaccurate
+  - `inferred`: Inferred from routing information; may be inaccurate
   - `overlaid`: Overlay from [as-overlay](https://github.com/ipverse/as-overlay) applied
   - `none`: No metadata available
 
