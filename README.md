@@ -99,6 +99,10 @@ Or just clone the repo if that's your thing.
 - Offline lookups (no API rate limits to deal with)
 - Pretty much anything where you need to map ASNs to operators
 
+## Related projects
+
+- **[as-overlay](https://github.com/ipverse/as-overlay)**: Autonomous system metadata overlays that supplement and enhance the authoritative data in this repository. When overlay data is applied, entries will have an `origin` value of `overlaid` in the JSON format.
+
 ## Questions or issues?
 
 Head over to the [feedback repo](https://github.com/ipverse/feedback) if you have questions, issues, or suggestions.
