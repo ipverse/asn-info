@@ -51,7 +51,7 @@ asn,handle,description,country-code
 
 ### New fields
 
-- **country-code**: ISO 3166-1 alpha-2 country code
+- **country-code** (CSV) / **countryCode** (JSON): ISO 3166-1 alpha-2 country code (XX if unknown in CSV)
 - **origin** (JSON only): Metadata source indicator
   - `authoritative`: From authoritative source
   - `inferred`: Inferred from routing information; may be inaccurate
