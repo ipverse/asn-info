@@ -1,0 +1,33 @@
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+*.egg-info/
+dist/
+build/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# AI Assistants
+.claude/
+.opencode/
+.cursor/
+.aider*
+.codeium/
+.continue/
+.copilot/
+.windsurf/
+.roo/
+.augment*/
+.codex/
+.gemini/
