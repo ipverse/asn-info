@@ -62,7 +62,8 @@ asn,handle,description,country-code
 - **asn**: Autonomous System Number
 - **handle**: Registry handle/identifier
 - **description**: Organization name or description
-- **country-code** (CSV) / **countryCode** (JSON): ISO 3166-1 alpha-2 country code
+- **country-code** (CSV): ISO 3166-1 alpha-2 country code (XX if unknown)
+- **countryCode** (JSON): ISO 3166-1 alpha-2 country code
 
 ### JSON-only fields
 
@@ -70,7 +71,7 @@ asn,handle,description,country-code
 - **origin**: Metadata source indicator
   - `authoritative`: From authoritative source
   - `inferred`: Inferred from routing information; may be inaccurate
-  - `overlaid`: Overlay from [as-overlay](https://github.com/ipverse/as-overlay) applied
+  - `overlaid`: Metadata overlay from [as-overlay](https://github.com/ipverse/as-overlay) applied
   - `none`: No metadata available
 
 ## Update notes
