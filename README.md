@@ -111,7 +111,7 @@ Or just clone the repo if that's your thing.
 
 ## Questions or issues?
 
-Head over to the [feedback repo](https://github.com/ipverse/feedback) if you have questions, issues, or suggestions.
+Head over to the [feedback repository](https://github.com/ipverse/feedback) if you have questions, issues, or suggestions.
 
 ## License
 
