@@ -4,10 +4,9 @@ This repository was renamed from **asn-info** to **as-metadata**.
 
 ## Migration steps
 
-1. If only consuming raw text files: just update the download URL, no code changes needed
-2. Update repository URLs in your code from `ipverse/asn-info` to `ipverse/as-metadata`
-3. If parsing CSV: handle the new country-code column (4th column)
-4. Consider using the new JSON format for richer metadata including origin tracking
+1. Update repository references from `ipverse/asn-info` to `ipverse/as-metadata` (git remote, download URLs, etc.)
+2. Update CSV parsing to handle the new 4th column (`country-code`) - you can ignore it if you don't need it
+3. Optionally, switch to the new JSON format for richer metadata including full country names and origin tracking
 
 ## What's changing
 
