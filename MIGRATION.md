@@ -43,7 +43,7 @@ asn,handle,description,country-code
       "countryCode": "US",
       "country": "United States",
       "origin": "authoritative",
-      "lastAnnounced": "2026-01-03"
+      "lastAnnounced": "2026-01-04T07:48:56.025859Z"
     }
   }
 ]
@@ -57,7 +57,7 @@ asn,handle,description,country-code
   - `inferred`: Inferred from routing information; may be inaccurate
   - `overlaid`: Overlay from [as-overlay](https://github.com/ipverse/as-overlay) applied
   - `none`: No metadata available
-- **lastAnnounced** (JSON only): Date when the AS was last seen announcing prefixes (may be `null` for older files or inactive ASNs)
+- **lastAnnounced** (JSON only): ISO 8601 timestamp (UTC) when the AS was last seen announcing prefixes (may be `null` for inactive ASNs)
 
 ### URL changes
 
