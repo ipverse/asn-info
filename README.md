@@ -24,7 +24,7 @@ Available formats: JSON and CSV
       "countryCode": "JP",
       "country": "Japan",
       "origin": "authoritative",
-      "lastAnnounced": "2026-01-03"
+      "lastAnnounced": "2026-01-04T07:48:56.025859Z"
     }
   },
   {
@@ -75,7 +75,7 @@ asn,handle,description,country-code
   - `inferred`: Inferred from routing information; may be inaccurate
   - `overlaid`: Metadata overlay from [as-overlay](https://github.com/ipverse/as-overlay) applied
   - `none`: No metadata available
-- **lastAnnounced**: Date when the AS was last seen announcing prefixes (may be `null` for older files or inactive ASNs)
+- **lastAnnounced**: ISO 8601 timestamp (UTC) when the AS was last seen announcing prefixes (may be `null` for inactive ASNs)
 
 ## Update notes
 
