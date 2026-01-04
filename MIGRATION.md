@@ -42,7 +42,8 @@ asn,handle,description,country-code
       "description": "Level 3 Parent LLC",
       "countryCode": "US",
       "country": "United States",
-      "origin": "authoritative"
+      "origin": "authoritative",
+      "lastAnnounced": "2026-01-03"
     }
   }
 ]
@@ -56,6 +57,7 @@ asn,handle,description,country-code
   - `inferred`: Inferred from routing information; may be inaccurate
   - `overlaid`: Overlay from [as-overlay](https://github.com/ipverse/as-overlay) applied
   - `none`: No metadata available
+- **lastAnnounced** (JSON only): Date when the AS was last seen announcing prefixes (may be `null` for older files or inactive ASNs)
 
 ### URL changes
 
