@@ -24,8 +24,26 @@ Available formats: JSON and CSV
       "countryCode": "JP",
       "country": "Japan",
       "origin": "authoritative",
-      "lastAnnounced": "2026-01-04T07:48:56.025859Z"
-    }
+      "registered": "1997-03-14T00:00:00Z"
+    },
+    "stats": {
+      "ipv4": {
+        "prefixes": 12,
+        "prefixesAggregated": 8,
+        "addresses": 4096,
+        "largestPrefix": 20
+      },
+      "ipv6": {
+        "prefixes": 3,
+        "prefixesAggregated": 2,
+        "largestPrefix": 32
+      },
+      "connectivity": {
+        "upstreams": 2,
+        "downstreams": 5
+      }
+    },
+    "lastAnnounced": "2026-01-04T11:40:34.965574Z"
   },
   {
     "asn": 4712,
@@ -35,8 +53,10 @@ Available formats: JSON and CSV
       "countryCode": "JP",
       "country": "Japan",
       "origin": "authoritative",
-      "lastAnnounced": null
-    }
+      "registered": "1997-03-14T00:00:00Z"
+    },
+    "stats": null,
+    "lastAnnounced": null
   }
 ]
 ```
@@ -75,10 +95,22 @@ asn,handle,description,country-code
   - `inferred`: Inferred from routing information; may be inaccurate
   - `overlaid`: Metadata overlay from [as-overlay](https://github.com/ipverse/as-overlay) applied
   - `none`: No metadata available
-- **lastAnnounced**: ISO 8601 timestamp (UTC) when the AS was last seen announcing prefixes (may be `null` for inactive ASNs)
+- **registered**: RIR registration date (time normalized to 00:00:00Z); `null` for inferred ASNs
+- **stats**: Prefix and connectivity statistics; `null` for ASNs without route collector data
+  - **stats.ipv4.prefixes**: Number of IPv4 prefixes announced
+  - **stats.ipv4.prefixesAggregated**: Number of IPv4 prefixes after aggregation
+  - **stats.ipv4.addresses**: Total IPv4 address count
+  - **stats.ipv4.largestPrefix**: Shortest IPv4 prefix length (e.g., /13)
+  - **stats.ipv6.prefixes**: Number of IPv6 prefixes announced
+  - **stats.ipv6.prefixesAggregated**: Number of IPv6 prefixes after aggregation
+  - **stats.ipv6.largestPrefix**: Shortest IPv6 prefix length (e.g., /29)
+  - **stats.connectivity.upstreams**: Number of upstream/provider ASNs
+  - **stats.connectivity.downstreams**: Number of downstream/customer ASNs
+- **lastAnnounced**: ISO 8601 timestamp when AS was last seen announcing prefixes; `null` if never seen
 
 ## Update notes
 
+- **2026-01-08**: Added `registered` field (RIR registration date), `stats` section (prefix and connectivity statistics), and moved `lastAnnounced` to top level.
 - **2026-01-03**: Repository renamed to `as-metadata`, CSV format changed to 4 columns (added country-code), JSON format added. See [MIGRATION.md](MIGRATION.md) for details.
 - 2025-08-03: Removed opinionated handle cleanup and removed quotes around descriptions to improve RFC4180 compliance
 - 2023-09-03: Removed PEM certificates from description field
