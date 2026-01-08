@@ -30,7 +30,6 @@ Available formats: JSON and CSV
       "ipv4": {
         "prefixes": 12,
         "prefixesAggregated": 8,
-        "addresses": 4096,
         "largestPrefix": 20
       },
       "ipv6": {
@@ -99,7 +98,6 @@ asn,handle,description,country-code
 - **stats**: Prefix and connectivity statistics; `null` for ASNs without route collector data
   - **stats.ipv4.prefixes**: Number of IPv4 prefixes announced
   - **stats.ipv4.prefixesAggregated**: Number of IPv4 prefixes after aggregation
-  - **stats.ipv4.addresses**: Total IPv4 address count
   - **stats.ipv4.largestPrefix**: Shortest IPv4 prefix length (e.g., /13)
   - **stats.ipv6.prefixes**: Number of IPv6 prefixes announced
   - **stats.ipv6.prefixesAggregated**: Number of IPv6 prefixes after aggregation
