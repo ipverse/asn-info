@@ -7,11 +7,21 @@
 
 A comprehensive dataset of autonomous system metadata for all assigned ASNs (autonomous system numbers). 
 Includes handle, organization name, and country code sourced from regional internet registries (RIR). 
-Updated daily when the underlying data changes.
+Updated automatically when source data changes (checked daily).
 
 Perfect for offline lookups, network analysis, threat intelligence, or any project where you need to map ASNs to organizations—no API rate limits, no external dependencies.
 
-Available formats: JSON and CSV
+Available formats: JSON (~55-60 MB) and CSV (~6 MB)
+
+## Contents
+
+- [Field descriptions](#field-descriptions)
+- [Update notes](#update-notes)
+- [How to use](#how-to-use)
+- [Use cases](#use-cases)
+- [Related projects](#related-projects)
+- [Questions or issues?](#questions-or-issues)
+- [License](#license)
 
 **JSON format:**
 ```json
@@ -98,10 +108,10 @@ asn,handle,description,country-code
 - **stats**: Prefix and connectivity statistics; `null` for ASNs without route collector data
   - **stats.ipv4.prefixes**: Number of IPv4 prefixes announced
   - **stats.ipv4.prefixesAggregated**: Number of IPv4 prefixes after aggregation
-  - **stats.ipv4.largestPrefix**: Shortest IPv4 prefix length (e.g., /13)
+  - **stats.ipv4.largestPrefix**: Largest IPv4 prefix announced (e.g., /13 — smaller number = larger block)
   - **stats.ipv6.prefixes**: Number of IPv6 prefixes announced
   - **stats.ipv6.prefixesAggregated**: Number of IPv6 prefixes after aggregation
-  - **stats.ipv6.largestPrefix**: Shortest IPv6 prefix length (e.g., /29)
+  - **stats.ipv6.largestPrefix**: Largest IPv6 prefix announced (e.g., /29 — smaller number = larger block)
   - **stats.connectivity.upstreams**: Number of upstream/provider ASNs
   - **stats.connectivity.downstreams**: Number of downstream/customer ASNs
 - **lastAnnounced**: ISO 8601 timestamp when AS was last seen announcing prefixes; `null` if never seen
@@ -110,8 +120,8 @@ asn,handle,description,country-code
 
 - **2026-01-08**: Added `registered` field (RIR registration date), `stats` section (prefix and connectivity statistics), and moved `lastAnnounced` to top level.
 - **2026-01-03**: Repository renamed to `as-metadata`, CSV format changed to 4 columns (added country-code), JSON format added. See [MIGRATION.md](MIGRATION.md) for details.
-- 2025-08-03: Removed opinionated handle cleanup and removed quotes around descriptions to improve RFC4180 compliance
-- 2023-09-03: Removed PEM certificates from description field
+- **2025-08-03**: Removed opinionated handle cleanup and removed quotes around descriptions to improve RFC4180 compliance
+- **2023-09-03**: Removed PEM certificates from description field
 
 ## How to use
 
@@ -128,6 +138,14 @@ curl -O https://raw.githubusercontent.com/ipverse/as-metadata/master/as.csv
 ```
 
 Or just clone the repo if that's your thing.
+
+**Quick example (Python):**
+```python
+import json
+with open('as.json') as f:
+    data = {entry['asn']: entry for entry in json.load(f)}
+print(data[4711]['metadata']['description'])  # INTEC Inc.
+```
 
 ## Use cases
 - Figure out who owns an ASN
