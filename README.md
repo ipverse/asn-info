@@ -48,9 +48,10 @@ Available formats: JSON (~55-60 MB) and CSV (~6 MB)
         "largestPrefix": 32
       },
       "connectivity": {
-        "upstreams": 2,
-        "downstreams": 5,
-        "degree": 7,
+        "providers": 2,
+        "customers": 5,
+        "peers": 3,
+        "degree": 10,
         "reach": 12
       }
     },
@@ -114,15 +115,16 @@ asn,handle,description,country-code
   - **stats.ipv6.prefixes**: Number of IPv6 prefixes announced
   - **stats.ipv6.prefixesAggregated**: Number of IPv6 prefixes after aggregation
   - **stats.ipv6.largestPrefix**: Largest IPv6 prefix announced (e.g., /29 — smaller number = larger block)
-  - **stats.connectivity.upstreams**: Number of upstream/provider ASNs
-  - **stats.connectivity.downstreams**: Number of downstream/customer ASNs
-  - **stats.connectivity.degree**: Total unique neighbor ASNs (upstreams + downstreams, deduplicated)
-  - **stats.connectivity.reach**: Total ASNs reachable downstream (transitive)
+  - **stats.connectivity.providers**: Number of transit provider ASNs
+  - **stats.connectivity.customers**: Number of transit customer ASNs
+  - **stats.connectivity.peers**: Number of settlement-free peer ASNs
+  - **stats.connectivity.degree**: Total unique neighbor ASNs (providers + customers + peers)
+  - **stats.connectivity.reach**: Customer cone size (ASNs reachable via customer relationships)
 - **lastAnnounced**: ISO 8601 timestamp when AS was last seen announcing prefixes; `null` if never seen
 
 ## Update notes
 
-- **2026-01-18**: Added `degree` and `reach` fields to connectivity statistics.
+- **2026-01-18**: **Breaking change:** Replaced `upstreams`/`downstreams` with `providers`/`customers`/`peers` to accurately distinguish transit relationships from peering. Added `degree` and `reach` fields.
 - **2026-01-08**: Added `registered` field (RIR registration date), `stats` section (prefix and connectivity statistics), and moved `lastAnnounced` to top level.
 - **2026-01-03**: Repository renamed to `as-metadata`, CSV format changed to 4 columns (added country-code), JSON format added. See [MIGRATION.md](MIGRATION.md) for details.
 - **2025-08-03**: Removed opinionated handle cleanup and removed quotes around descriptions to improve RFC4180 compliance
