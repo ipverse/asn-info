@@ -49,7 +49,9 @@ Available formats: JSON (~55-60 MB) and CSV (~6 MB)
       },
       "connectivity": {
         "upstreams": 2,
-        "downstreams": 5
+        "downstreams": 5,
+        "degree": 7,
+        "reach": 12
       }
     },
     "lastAnnounced": "2026-01-04T11:40:34.965574Z"
@@ -114,10 +116,13 @@ asn,handle,description,country-code
   - **stats.ipv6.largestPrefix**: Largest IPv6 prefix announced (e.g., /29 — smaller number = larger block)
   - **stats.connectivity.upstreams**: Number of upstream/provider ASNs
   - **stats.connectivity.downstreams**: Number of downstream/customer ASNs
+  - **stats.connectivity.degree**: Total unique neighbor ASNs (upstreams + downstreams, deduplicated)
+  - **stats.connectivity.reach**: Total ASNs reachable downstream (transitive)
 - **lastAnnounced**: ISO 8601 timestamp when AS was last seen announcing prefixes; `null` if never seen
 
 ## Update notes
 
+- **2026-01-18**: Added `degree` and `reach` fields to connectivity statistics.
 - **2026-01-08**: Added `registered` field (RIR registration date), `stats` section (prefix and connectivity statistics), and moved `lastAnnounced` to top level.
 - **2026-01-03**: Repository renamed to `as-metadata`, CSV format changed to 4 columns (added country-code), JSON format added. See [MIGRATION.md](MIGRATION.md) for details.
 - **2025-08-03**: Removed opinionated handle cleanup and removed quotes around descriptions to improve RFC4180 compliance
