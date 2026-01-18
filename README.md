@@ -3,7 +3,13 @@
 > **📢 Heads up:** This repo has been upgraded! 
 > Now includes a new **JSON format** with full country names and origin tracking, plus country codes in CSV. 
 > The repo has been renamed to `as-metadata` to reflect the richer dataset. 
-> Check out [MIGRATION.md](MIGRATION.md) for the quick migration steps (most users just need to update URLs). 
+> Check out [MIGRATION.md](MIGRATION.md) for the quick migration steps (most users just need to update URLs).
+
+## 🔍 Try it online
+
+Explore AS metadata interactively at **[Lens by ipverse](https://lens.ipverse.net)** — search IP addresses, prefixes, and autonomous systems without downloading anything.
+
+## Overview
 
 A comprehensive dataset of autonomous system metadata for all assigned ASNs (autonomous system numbers). 
 Includes handle, organization name, and country code sourced from regional internet registries (RIR). 
