@@ -17,17 +17,17 @@ Updated automatically when source data changes (checked daily).
 
 Perfect for offline lookups, network analysis, threat intelligence, or any project where you need to map ASNs to organizations—no API rate limits, no external dependencies.
 
-Available formats: JSON (~55-60 MB) and CSV (~6 MB)
+## Update notes
 
-## Contents
+- **2026-01-18**: **Breaking change:** Replaced `upstreams`/`downstreams` with `providers`/`customers`/`peers` to accurately distinguish transit relationships from peering. Added `degree` and `reach` fields.
+- **2026-01-08**: Added `registered` field (RIR registration date), `stats` section (prefix and connectivity statistics), and moved `lastAnnounced` to top level.
+- **2026-01-03**: Repository renamed to `as-metadata`, CSV format changed to 4 columns (added country-code), JSON format added. See [MIGRATION.md](MIGRATION.md) for details.
+- **2025-08-03**: Removed opinionated handle cleanup and removed quotes around descriptions to improve RFC4180 compliance
+- **2023-09-03**: Removed PEM certificates from description field
 
-- [Field descriptions](#field-descriptions)
-- [Update notes](#update-notes)
-- [How to use](#how-to-use)
-- [Use cases](#use-cases)
-- [Related projects](#related-projects)
-- [Questions or issues?](#questions-or-issues)
-- [License](#license)
+## Available formats
+
+JSON (~55-60 MB) and CSV (~6 MB)
 
 **JSON format:**
 ```json
@@ -127,14 +127,6 @@ asn,handle,description,country-code
   - **stats.connectivity.degree**: Total unique neighbor ASNs (providers + customers + peers)
   - **stats.connectivity.reach**: Customer cone size (ASNs reachable via customer relationships)
 - **lastAnnounced**: ISO 8601 timestamp when AS was last seen announcing prefixes; `null` if never seen
-
-## Update notes
-
-- **2026-01-18**: **Breaking change:** Replaced `upstreams`/`downstreams` with `providers`/`customers`/`peers` to accurately distinguish transit relationships from peering. Added `degree` and `reach` fields.
-- **2026-01-08**: Added `registered` field (RIR registration date), `stats` section (prefix and connectivity statistics), and moved `lastAnnounced` to top level.
-- **2026-01-03**: Repository renamed to `as-metadata`, CSV format changed to 4 columns (added country-code), JSON format added. See [MIGRATION.md](MIGRATION.md) for details.
-- **2025-08-03**: Removed opinionated handle cleanup and removed quotes around descriptions to improve RFC4180 compliance
-- **2023-09-03**: Removed PEM certificates from description field
 
 ## How to use
 
